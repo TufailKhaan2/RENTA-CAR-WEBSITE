@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+
+    <body class="bg-slate-300">
+
+      <!-- header section  -->
+      <div class=" bg-sky-500 md:flex items-center p-5 gap-3  text-white text-[18px] hidden md:block flex-wrap " class="dark">
+        <i class="fa-solid fa-envelope" style="color: #ffffff;"></i>
+        <p>info@aaarentacar.pk</p>
+        <p class=" right-7 -rotate-[20deg]">/</p>
+        <div class=" flex items-center gap-5">
+          <i class="fa-brands fa-windows" style="color: #ffffff;"></i>
+          <p class="mr-60">22 E, Block 6 E Market, PECHS, KARACHI</p>
+          
+          <div class="absolute right-2 flex gap-5 text-white text-3xl font-bold">
+            <i class="fa-solid fa-phone cursor-pointer" ></i>
+            <p class="text-2xl cursor-pointer ">0333-123456789</p> 
+        </div>
+
+          
+  
+        </div>
+    </div>   
+
+
+      <!-- menu section  -->
+      <div class="md:px-16 md:pt-10 md:pb-32 py-5 px-6 pb-10 pt-5 bg-cover bg-no-repeat relative" id="dynamic-bg">
+        <!-- Initial background image -->
+        <div class="absolute inset-0 bg-black opacity-65"></div>
+    
+        <!-- Content -->
+        <div class="relative text-white flex md:flex-row justify-between items-center text-xl z-10">
+            <p class="text-red-500 font-bold hover:text-sky-500 duration-500 cursor-pointer hover:-translate-y-1 hover:scale-125 mb-4 md:mb-0 text-[30px] md:text-[28px] ">Renta-Car</p>
+    
+            <div class="hidden md:flex gap-5">
+                <a href="#" class="p-2 rounded-md font-bold border-2 border-slate-400 text-slate-200 hover:-translate-y-1 duration-200 hover:scale-105 ">Home</a>
+                <a href="#" class="p-2 rounded-md font-bold border-2 border-slate-400 text-slate-200 hover:-translate-y-1 duration-200 hover:scale-105 ">About</a>
+                <a href="#" class="p-2 rounded-md font-bold border-2 border-slate-400 text-slate-200 hover:-translate-y-1 duration-200 hover:scale-105 ">Us</a>
+                <a href="#" class="p-2 rounded-md font-bold border-2 border-slate-400 text-slate-200 hover:-translate-y-1 duration-200 hover:scale-105 ">Profilo</a>
+                <a href="#" class="p-2 rounded-md font-bold border-2 border-slate-400 text-slate-200 hover:-translate-y-1 duration-200 hover:scale-105 ">Contact</a>
+            </div>
+    
+            <div class="md:hidden">
+                <i class="fa-solid fa-bars text-sky-500 cursor-pointer"></i>
+            </div>
+        </div> 
+    
+        <div class="text-white md:mt-40 mt-16 md:w-2/3 mb-8 relative z-10">
+            <div class="w-full h-full">
+                <h1 id="typewriter" class="text-2xl md:text-5xl font-bold h-10"></h1>
+            </div>
+            
+            <script>
+                                    const words = ["Drive Your Dreams:", "Where Adventure Begins!,"];
+                    let i = 0;
+                    let j = 0;
+                    let currentWord = "";
+                    let isDeleting = false;
+    
+                    function type() {
+                        currentWord = words[i];
+                        if (isDeleting) {
+                            document.getElementById("typewriter").textContent = currentWord.substring(0, j-1);
+                            j--;
+                            if (j == 0) {
+                                isDeleting = false;
+                                i++;
+                                if (i == words.length) {
+                                    i = 0;
+                                }
+                            }
+                        } else {
+                            document.getElementById("typewriter").textContent = currentWord.substring(0, j+1);
+                            j++;
+                            if (j == currentWord.length) {
+                                isDeleting = true;
+                            }
+                        }
+                        setTimeout(type, 100);
+                    }
+                    
+                    type();
+            </script>
+            
+            <div class="md:mt-14">
+                <h3 id="typed-text" class="md:text-3xl text-xl font-bold text-sky-500"></h3>
+            </div>
+            
+            <script>
+                function typeWriterEffect(text, elementId, speed) {
+                        const typedTextElement = document.getElementById(elementId);
+                        let index = 0;
+                        function type() {
+                            if (index < text.length) {
+                                typedTextElement.textContent += text.charAt(index);
+                                index++;
+                                setTimeout(type, speed);
+                            }
+                        }
+                        type();
+                    }
+                    
+                    // typeWriterEffect("Frontend Developer", "typed-text", 150);
+            </script>
+            
+            <p class="mt-8 md:text-2xl text-justify ">Discover seamless journeys with our premier car rental services. Your perfect ride awaits!</p>
+    
+            <div class="mt-14 flex flex-col md:flex-row md:space-x-4 md:text-xl">
+                <button class="p-4 rounded-md font-bold md:px-14 bg-sky-500 text-white hover:-translate-y-1 duration-200 hover:scale-105">Book Now!</button>
+                <button class="p-4 rounded-md font-bold md:px-14 border-2 border-sky-500 text-sky-500 hover:-translate-y-1 duration-200 hover:scale-105 mt-4 md:mt-0">Have any question?</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- background images slides after 8 sec section  -->
+    <script>
+        // Array of background images
+        const backgroundImages = [
+            'https://static.vecteezy.com/system/resources/previews/022/190/941/non_2x/abstract-speed-electric-cars-in-the-illustration-electric-cars-are-powered-by-electric-energy-future-energy-on-blue-background-free-photo.jpg',
+            'https://www.hdcarwallpapers.com/walls/super_sports_cars-HD.jpg', // Replace with your second image URL
+            'https://imteg.weebly.com/uploads/5/4/9/8/54982803/2421183_orig.jpg'   // Replace with your third image URL
+        ];
+    
+        let currentImageIndex = 0;
+        const bgElement = document.getElementById('dynamic-bg');
+    
+        function changeBackgroundImage() {
+            bgElement.style.backgroundImage = `url(${backgroundImages[currentImageIndex]})`;
+            currentImageIndex = (currentImageIndex + 1) % backgroundImages.length;
+        }
+    
+        // Change background image every 8 seconds
+        setInterval(changeBackgroundImage, 10000);
+    </script>
+    
+    
+
+            <div class="md:mx-28 mx-5 md:-translate-y-28 flex-wrap">
+            <div style="background-color:  #ffffff;" class=" md:px-12 px-5 md:pb-12 pb-8 border-2 border-b-neutral-200 ">
+                <div class="gap-3 my-10 md:flex items-center flex-wrap ">
+                    <div class="mb-2">
+                        <p class="font-semibold md:text-xl">SELECT LOCATION</p>
+                    <select class="py-4 px-4 w-full h-auto bg-slate-100 rounded-md">
+                        <option value="">Karachi Airport</option>
+                        <option value="hurr">Durr</option>
+                        <option value="hurr">Durr</option>
+                        <option value="hurr">Durr</option>
+                        <option value="hurr">Durr</option>
+                    </select>
+                    </div>
+                    
+                    <div class=" mb-2">
+                        <p class="font-semibold md:text-xl">SELECT YOUR RIDE <span class="text-red-500 text-xl">*</span></p>
+                        <select class="py-4 px-3 w-full h-auto bg-slate-100 rounded-md" >
+                            <option value="" required>Tyota Corolla Gli</option>
+                            <option value="hurr">Durr</option>
+                            <option value="hurr">Durr</option>
+                            <option value="hurr">Durr</option>
+                            <option value="hurr">Durr</option>
+                        </select>
+    
+                    </div>
+                    
+                    <div class="mb-2">
+                        <p class="font-semibold md:text-xl">PICK UP DATE</p>
+                        <input class="py-4 px-3 bg-slate-100 w-full h-auto rounded-md" type="date" name="" id="date"  >
+                    </div>
+
+                    <div class="mb-2">                        
+                        <p class="font-semibold md:text-xl">PHONE NUMBER <span class="text-red-500 text-xl">*</span></p>
+                        <input class="p-4 bg-slate-100 w-full h-auto rounded-md" id="phone_number" required placeholder="NUMBER">
+                    </div>
+    
+                    </div>
+                    <div class="" style="margin-top: -25px;">
+                        <p class="font-semibold md:text-xl">YOUR MESSAGE</p>
+                        <textarea name="" id="" cols="30" class="w-full h-auto md:p-5 p-2 bg-slate-100 rounded-md" placeholder="Type"></textarea>
+                    </div>
+                    <button type="button" class=" hover:bg-slate-700 ease-out duration-300 w-full h-auto md:p-5 p-3  text-white bg-sky-500 font-bold text-[17px] md:text-xl rounded-md">Book Now</button>
+
+            </div>
+        </div>
+
+    
+
+        <!-- header complete  -->
+      <div class="bg-slate-900 pt-16 md:-translate-y-28">
+        <!-- car collectio heading -->
+         <div class="">
+          <p class=" mb-8 text-slate-300 md:text-4xl text-2xl md:p-8 p-5 text-center font-medium underline shadow-lg bg-gradient-to-r from-green-400 via-blue-500 to-red-500 "
+   style="text-shadow: 1px 1px 2px rgb(255, 0, 0), 2px 2px 2px rgb(10, 10, 255), 3px 3px 2px rgb(255, 0, 0);">
+  VEHICLES COLLECTION
+</p>
+
+               <marquee  class="md:mx-16 mx-5  mb-16" behavior="" direction="right"><img class="bg-transparent w-40 h-28 md:w-72 md:h-full" style="transform: rotateY(220deg);" src="./img/images-removebg-preview.png"></marquee>
+         </div>
+         
+
+      
+        <!-- cars card section 2st -->
+
+        <div class="flex md:mx-16 mx-5 justify-between gap-3 mb-20 hover:-translate-y-10 duration-500 flex-wrap ">
+            <div class="w-full md:w-max ">
+    
+                <img class="md:w-[380px] md:h-[250px] " src="https://aaarentacar.pk/wp-content/uploads/2024/06/cultus-1024x643.jpg" alt="">
+                <div class="md:mx-10 mx-5 border-2 border-b-neutral-200  p-8 -translate-y-8" style="background-color:  #ffffff;">
+                    <p class="md:text-xl text-xl text-sky-500 font-bold">TOYOTA</p>
+                    <p class="md:text-3xl text-2xl font-bold mb-2">COROLLA GLI</p>
+                    <p class="text-xl font-bold mb-1  text-sky-500">RS. 4,500 / <span class="text-slate-400 text-[16px]">PERDAY</span></p>
+                    <p class="text-[18px] text-slate-500 mb-10">A/C
+                      Petrol
+                    4 Person</p>
+                    <button type="button" class="hover:bg-slate-500 duration-200 w-full p-5 bg-sky-500 font-bold text-white">BOOK NOW</button>
+                </div>            
+                
+                </div>
+    
+                <div class="w-full md:w-max">
+    
+                    <img class="md:w-[380px] md:h-[250px]" src="https://aaarentacar.pk/wp-content/uploads/2024/07/Civic-P-1024x642.jpg" alt="">
+                    <div class="md:mx-10 mx-5 border-2 border-b-neutral-200  p-8 -translate-y-8" style="background-color:  #ffffff;">
+                        <p class="text-xl text-sky-500 font-bold">TOYOTA</p>
+                        <p class="text-3xl font-bold mb-2">COROLLA GLI</p>
+                        <p class="text-xl font-bold mb-1  text-sky-500">RS. 4,500 / <span class="text-slate-400 text-[16px]">PERDAY</span></p>
+                        <p class="text-[18px] text-slate-500 mb-10">A/C
+                          Petrol
+                        4 Person</p>
+                        <button type="button" class="hover:bg-slate-500 duration-200 w-full p-5 bg-sky-500 font-bold text-white">BOOK NOW</button>
+                    </div>            
+                    
+                    </div>
+    
+                    <div class="w-full md:w-max">
+    
+                        <img class="md:w-[380px] md:h-[250px]" src="https://aaarentacar.pk/wp-content/uploads/2024/07/Brv-P-1024x642.jpg" alt="">
+                        <div class="md:mx-10 mx-5 border-2 border-b-neutral-200  p-8 -translate-y-8" style="background-color:  #ffffff;">
+                            <p class="text-xl text-sky-500 font-bold">TOYOTA</p>
+                            <p class="text-3xl font-bold mb-2">COROLLA GLI</p>
+                            <p class="text-xl font-bold mb-1  text-sky-500">RS. 4,500 / <span class="text-slate-400 text-[16px]">PERDAY</span></p>
+                            <p class="text-[18px] text-slate-500 mb-10 ">A/C
+                              Petrol
+                            4 Person</p>
+                            <button type="button" class=" hover:bg-slate-500 duration-200 w-full p-5 bg-sky-500 font-bold text-white">BOOK NOW</button>
+                        </div>            
+                        
+                        </div>
+            
+        
+                </div>
+                
+                <!-- car section 3rd  -->
+
+                <div class="flex md:mx-16 mx-5 justify-between gap-3 mb-20 hover:-translate-y-10 duration-500 flex-wrap">
+                    <div class="w-full md:w-max">
+            
+                        <img class="md:w-[380px] md:h-[250px]" src="https://aaarentacar.pk/wp-content/uploads/2024/07/Hiace-P-1024x642.jpg" alt="">
+                        <div class="md:mx-10 mx-5 border-2 border-b-neutral-200  p-8 -translate-y-8" style="background-color:  #ffffff;">
+                            <p class="text-xl text-sky-500 font-bold">TOYOTA</p>
+                            <p class="text-3xl font-bold mb-2">COROLLA GLI</p>
+                            <p class="text-xl font-bold mb-1  text-sky-500">RS. 4,500 / <span class="text-slate-400 text-[16px]">PERDAY</span></p>
+                            <p class="text-[18px] text-slate-500 mb-10">A/C
+                              Petrol
+                            4 Person</p>
+                            <button type="button" class="hover:bg-slate-500 duration-200 w-full p-5 bg-sky-500 font-bold text-white">BOOK NOW</button>
+                        </div>            
+                        
+                        </div>
+            
+                        <div class="w-full md:w-max">
+            
+                            <img class="md:w-[380px] md:h-[250px]" src="https://aaarentacar.pk/wp-content/uploads/2024/07/Coaster-P-1024x642.jpg" alt="">
+                            <div class="md:mx-10 mx-5 border-2 border-b-neutral-200  p-8 -translate-y-8" style="background-color:  #ffffff;">
+                                <p class="text-xl text-sky-500 font-bold">TOYOTA</p>
+                                <p class="text-3xl font-bold mb-2">COROLLA GLI</p>
+                                <p class="text-xl font-bold mb-1  text-sky-500">RS. 4,500 / <span class="text-slate-400 text-[16px]">PERDAY</span></p>
+                                <p class="text-[18px] text-slate-500 mb-10">A/C
+                                  Petrol
+                                4 Person</p>
+                                <button type="button" class="hover:bg-slate-500 duration-200 w-full p-5 bg-sky-500 font-bold text-white">BOOK NOW</button>
+                            </div>            
+                            
+                            </div>
+            
+                            <div class="w-full md:w-max">
+            
+                                <img class="md:w-[380px] md:h-[250px]" src="https://aaarentacar.pk/wp-content/uploads/2024/07/Fortuner-P-1024x642.jpg" alt="">
+                                <div class="md:mx-10 mx-5 border-2 border-b-neutral-200  p-8 -translate-y-8" style="background-color:  #ffffff;">
+                                    <p class="text-xl text-sky-500 font-bold">TOYOTA</p>
+                                    <p class="text-3xl font-bold mb-2">COROLLA GLI</p>
+                                    <p class="text-xl font-bold mb-1  text-sky-500">RS. 4,500 / <span class="text-slate-400 text-[16px]">PERDAY</span></p>
+                                    <p class="text-[18px] text-slate-500 mb-10 ">A/C
+                                      Petrol
+                                    4 Person</p>
+                                    <button type="button" class=" hover:bg-slate-500 duration-200 w-full p-5 bg-sky-500 font-bold text-white">BOOK NOW</button>
+                                </div>            
+                                
+                                </div>
+                    
+                
+                        </div>
+
+                        <!-- car section 4th  -->
+
+                        <div class="flex md:mx-16 mx-5 justify-between gap-3 mb-20 hover:-translate-y-10 duration-500 flex-wrap">
+                            <div class="w-full md:w-max">
+                    
+                                <img class="md:w-[380px] md:h-[250px]" src="https://aaarentacar.pk/wp-content/uploads/2024/07/Revo-P-1024x642.jpg" alt="">
+                                <div class="md:mx-10 mx-5 border-2 border-b-neutral-200  p-8 -translate-y-8" style="background-color:  #ffffff;">
+                                    <p class="text-xl text-sky-500 font-bold">TOYOTA</p>
+                                    <p class="text-3xl font-bold mb-2">COROLLA GLI</p>
+                                    <p class="text-xl font-bold mb-1  text-sky-500">RS. 4,500 / <span class="text-slate-400 text-[16px]">PERDAY</span></p>
+                                    <p class="text-[18px] text-slate-500 mb-10">A/C
+                                      Petrol
+                                    4 Person</p>
+                                    <button type="button" class="hover:bg-slate-500 duration-200 w-full p-5 bg-sky-500 font-bold text-white">BOOK NOW</button>
+                                </div>            
+                                
+                                </div>
+                    
+                                <div class="w-full md:w-max">
+                    
+                                    <img class="md:w-[380px] md:h-[250px]" src="https://aaarentacar.pk/wp-content/uploads/2024/07/Vigo-P-1024x642.jpg" alt="">
+                                    <div class="md:mx-10 mx-5 border-2 border-b-neutral-200  p-8 -translate-y-8" style="background-color:  #ffffff;">
+                                        <p class="text-xl text-sky-500 font-bold">TOYOTA</p>
+                                        <p class="text-3xl font-bold mb-2">COROLLA GLI</p>
+                                        <p class="text-xl font-bold mb-1  text-sky-500">RS. 4,500 / <span class="text-slate-400 text-[16px]">PERDAY</span></p>
+                                        <p class="text-[18px] text-slate-500 mb-10">A/C
+                                          Petrol
+                                        4 Person</p>
+                                        <button type="button" class="hover:bg-slate-500 duration-200 w-full p-5 bg-sky-500 font-bold text-white">BOOK NOW</button>
+                                    </div>            
+                                    
+                                    </div>
+                    
+                                    <div class="w-full md:w-max">
+                    
+                                        <img class="md:w-[380px] md:h-[250px]" src="https://aaarentacar.pk/wp-content/uploads/2024/07/Prado-P-1024x642.jpg" alt="">
+                                        <div class="md:mx-10 mx-5 border-2 border-b-neutral-200  p-8 -translate-y-8" style="background-color:  #ffffff;">
+                                            <p class="text-xl text-sky-500 font-bold">TOYOTA</p>
+                                            <p class="text-3xl font-bold mb-2">COROLLA GLI</p>
+                                            <p class="text-xl font-bold mb-1  text-sky-500">RS. 4,500 / <span class="text-slate-400 text-[16px]">PERDAY</span></p>
+                                            <p class="text-[18px] text-slate-500 mb-10 ">A/C
+                                              Petrol
+                                            4 Person</p>
+                                            <button type="button" class=" hover:bg-slate-500 duration-200 w-full p-5 bg-sky-500 font-bold text-white">BOOK NOW</button>
+                                        </div>            
+                                        
+                                        </div>                            
+                        
+                                </div>
+                              </div>
+
+        <!-- caR ENDS      -->
+
+
+        <div class="mt-10 px-4 md:px-20">
+            <div class="max-w-7xl mx-auto">
+                <p class="text-center mt-2 mb-5 text-2xl md:text-4xl font-bold">TOP LOCATIONS WE SERVE</p>
+                <div class="grid gap-6 md:flex md:gap-6 md:justify-center">
+                    <div class="flex flex-col items-center">
+                        <img class="w-full md:w-96 h-auto" src="https://aaarentacar.pk/wp-content/uploads/2024/06/Clifton-Karachi-1024x643.jpg" alt="Clifton Karachi">
+                        <p class="text-xl md:text-2xl mt-5 font-bold text-center">CLIFTON KARACHI</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img class="w-full md:w-96 h-auto" src="https://aaarentacar.pk/wp-content/uploads/2024/06/Bahria-Town-1024x643.jpg" alt="Bahria Town Karachi">
+                        <p class="text-xl md:text-2xl mt-5 font-bold text-center">BAHRIA TOWN KARACHI</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img class="w-full md:w-96 h-auto" src="https://aaarentacar.pk/wp-content/uploads/2024/06/Defence-Karachi-1024x643.jpg" alt="Defence Karachi">
+                        <p class="text-xl md:text-2xl mt-5 font-bold text-center">DEFENCE KARACHI</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="md:flex mt-20 justify-between flex-wrap">
+                <div class="mb-5">
+                  <p class="text-2xl mt-5 font-bold">POPULAR SERVICE AREAS:</p>
+                  <ul class="ml-9 mt-10 text-slate-600 cursor-pointer">
+                    <li>Karachi Airport</li>
+                    <li>Shah Faisal Colony</li>
+                    <li>Gulistan-E-Johar</li>
+                    <li>Bufferzone</li>
+                    <li>Korangi Industrial Area</li>
+                    <li>Saddar Karachi</li>
+                    <li>Tariq Road Karachi</li>
+                    <li>and more…</li>
+                  </ul>
+                </div>  
+                <iframe class="h-72 md:w-[50%] w-full" 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3100.343888095118!2d-122.40161418464731!3d37.78537337975744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085807de52ec4f9%3A0x7487e4822c07f9b5!2sGolden%20Gate%20Bridge!5e0!3m2!1sen!2sus!4v1626189963082!5m2!1sen!2sus"
+                  allowfullscreen>
+              </iframe>        
+              </div>              
+        </div>
+            
+
+        <div class="bg-stone-800">
+            <div class="md:p-[100px] md:flex p-10 gap-10 flex-wrap justify-between">
+          
+              
+            <div class="md:w-[300px] w-full mb-5">
+              <img class="w-[250px] h-[100px] mb-5 mx-auto md:mx-0"  src="https://aaarentacar.pk/wp-content/uploads/2024/06/White-logo.png" alt="">
+              <p class="text-slate-300">Experience Unmatched Comfort and Convenience with AAA Rent-A-Car – Serving Karachi with Excellence!</p>
+              <div class=" hover:bg-sky-500 hover:text-black duration-500 mt-10 flex items-center bg-slate-900 py-5 text-white">
+                <div class="p-5 hover:bg-black">
+                  <i class=" fa-solid fa-headphones text-3xl" style="color: #74C0FC;"></i>
+                </div>
+                <div class="">
+                  <p class="text-slate-300">TALK WITH OUR SUPPORT</p>
+                  <p class="font-bold">0 (333) 214 8147</p>  
+                </div>
+              </div>
+            </div>
+          
+            
+            <div class="text-white py-14 md:py-0">
+              <ul class="">
+                <h1 class="text-[20px] font-bold mb-4">USEFUL LINKS</h1>
+                <li class="cursor-pointer text-slate-300 leading-[30px]"><i class="fa-brands fa-youtube fa-flip-vertical mr-5 text-xl" style="color: #0892fd;transform: rotatey(50deg) ;" ></i>Luxury Vehicles</li>
+                <li class="cursor-pointer text-slate-300 leading-[38px]"><i class="fa-brands fa-youtube fa-flip-vertical mr-5 text-xl" style="color: #0892fd;transform: rotatey(50deg) ;" ></i>SUV Cars</li>
+                <li class="cursor-pointer text-slate-300 leading-[38px]"><i class="fa-brands fa-youtube fa-flip-vertical mr-5 text-xl" style="color: #0892fd;transform: rotatey(50deg) ;" ></i>Standard Vehicles</li>
+                <li class="cursor-pointer text-slate-300 leading-[38px]"><i class="fa-brands fa-youtube fa-flip-vertical mr-5 text-xl" style="color: #0892fd;transform: rotatey(50deg) ;" ></i>Hiace & Coaster</li>
+                <li class="cursor-pointer text-slate-300 leading-[38px]"><i class="fa-brands fa-youtube fa-flip-vertical mr-5 text-xl" style="color: #0892fd;transform: rotatey(50deg) ;" ></i>All Vehicles</li>
+                <li class="cursor-pointer text-slate-300 leading-[38px]"><i class="fa-brands fa-youtube fa-flip-vertical mr-5 text-xl" style="color: #0892fd;transform: rotatey(50deg) ;" ></i>About us</li>
+                <li class="cursor-pointer text-slate-300 leading-[38px]"><i class="fa-brands fa-youtube fa-flip-vertical mr-5 text-xl" style="color: #0892fd;transform: rotatey(50deg) ;" ></i>Contact Us</li>
+              </ul>
+            </div>
+           
+          
+            <div class="text-white py-14 md:py-0">
+              <ul class="">
+                <h1 class= "text-[20px] font-bold mb-4">USEFUL LINKS</h1>
+                <li class="cursor-pointer text-slate-300 leading-[38px]"><i class="fa-brands fa-youtube fa-flip-vertical mr-5 text-xl" style="color: #0892fd;transform: rotatey(50deg) ;" ></i>Luxury Vehicles</li>
+                <li class="cursor-pointer text-slate-300 leading-[38px]"><i class="fa-brands fa-youtube fa-flip-vertical mr-5 text-xl" style="color: #0892fd;transform: rotatey(50deg) ;" ></i>SUV Cars</li>
+                <li class="cursor-pointer text-slate-300 leading-[38px]"><i class="fa-brands fa-youtube fa-flip-vertical mr-5 text-xl" style="color: #0892fd;transform: rotatey(50deg) ;" ></i>Standard Vehicles</li>
+                <li class="cursor-pointer text-slate-300 leading-[38px]"><i class="fa-brands fa-youtube fa-flip-vertical mr-5 text-xl" style="color: #0892fd;transform: rotatey(50deg) ;" ></i>Hiace & Coaster</li>
+                <li class="cursor-pointer text-slate-300 leading-[38px]"><i class="fa-brands fa-youtube fa-flip-vertical mr-5 text-xl" style="color: #0892fd;transform: rotatey(50deg) ;" ></i>All Vehicles</li>
+                <li class="cursor-pointer text-slate-300 leading-[38px]"><i class="fa-brands fa-youtube fa-flip-vertical mr-5 text-xl" style="color: #0892fd;transform: rotatey(50deg) ;" ></i>About us</li>
+                <li class="cursor-pointer text-slate-300 leading-[38px]"><i class="fa-brands fa-youtube fa-flip-vertical mr-5 text-xl" style="color: #0892fd;transform: rotatey(50deg) ;" ></i>Contact Us</li>
+                <li class="cursor-pointer text-slate-300 leading-[38px]"><i class="fa-brands fa-youtube fa-flip-vertical mr-5 text-xl" style="color: #0892fd;transform: rotatey(50deg) ;" ></i>Contact Us</li>
+                <li class="cursor-pointer text-slate-300 leading-[38px]"><i class="fa-brands fa-youtube fa-flip-vertical mr-5 text-xl" style="color: #0892fd;transform: rotatey(50deg) ;" ></i>Contact Us</li>
+                <li class="cursor-pointer text-slate-300 leading-[38px]"><i class="fa-brands fa-youtube fa-flip-vertical mr-5 text-xl" style="color: #0892fd;transform: rotatey(50deg) ;" ></i>Zaryan</li>
+              </ul>
+            </div>
+          
+          
+            <div class="text-white ">
+              <h1 class="text-3xl font-bold mb-7">INFORMATION</h1>
+          
+              <div class="mb-5 leading-[28px] ">
+                <p class="text-[18px] font-bold">OFFICE TIMINGS</p>
+                <p class="text-slate-300">Monday - Sunday:</p>
+                <p class="text-slate-300">07:00 am to 11:00 pm</p>      
+              </div>
+          
+              <div class="mb-5 leading-[28px]">
+                <p class="text-[18px] font-bold">CONTACT US</p>
+                <p class="text-slate-300">info@aaarentacar</p>
+                <p class="text-slate-300">0333 - 214 81 47</p>      
+              </div>
+          
+              <div class="mb-5 leading-[28px]">
+                <p class="text-[18px] font-bold">OFFICE LOCATION:</p>
+                <p class="text-slate-300">22 E, Block 6 E Market,</p>
+                <p class="text-slate-300">PECHS,  KARACHI</p>      
+              </div>
+          
+            </div>
+          </div>
+          </div>
+              
+            
+
+
+            <!-- ENDS HERE  -->
+                    
+
+
+
+</body>
+</html>
